@@ -12,6 +12,20 @@ except:
     print("There was an error in opening \"./config.json\".\nPlease verify that you have correctly configured your file!")
     sys.exit()
 
-# Initializing client and running Zomo!
+# Initializing client
 client = discord.Client()
+
+# Reading every message sent in a channel Zomo monitors
+@client.event
+async def on_message(message):
+
+    # Filters out messages sent by bots (including Zomo)
+    if(message.author.bot):
+        return
+
+    # Sends a greeting on "<prefix>hi"
+    if(message.content == (config["prefix"] + "hi")):
+        await message.channel.send("Hi! :heart:")
+
+# Start Zomo!
 client.run(config["token"])
