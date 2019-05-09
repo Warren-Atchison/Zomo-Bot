@@ -2,6 +2,211 @@ if __name__ == "__main__":
     main()
 
 def main():
+    # Opening the god information CSV
+    with open("godsinfo.csv") as god_info:
+        reader = csv.reader(god_info)
+
+        #The following lists are for use in randomizing gods
+        guardians = []
+
+        warriors = []
+
+        assassins = []
+
+        hunters = []
+
+        mages = []
+
+        greek = []
+        roman = []
+        norse = []
+        egypt = []
+        hindu = []
+        china = []
+        mayan = []
+        japan = []
+        celtic = []
+        slavic = []
+        poly = []
+        voodo = []
+        arthur = []
+
+        next(god_info)
+        for row in reader:
+            if row[0] not in (None, ""):
+                guardians.append(row[0])
+
+                # Assigning pantheon
+                if row[2] == "Greek":
+                    greek.append(row[0])
+                elif row[2] == "Egyptian":
+                    egypt.append(row[0])
+                elif row[2] == "Norse":
+                    norse.append(row[0])
+                elif row[2] == "Chinese":
+                    china.append(row[0])
+                elif row[2] == "Roman":
+                    roman.append(row[0])
+                elif row[2] == "Mayan":
+                    mayan.append(row[0])
+                elif row[2] == "Hindu":
+                    hindu.append(row[0])
+                elif row[2] == "Japanese":
+                    japan.append(row[0])
+                elif row[2] == "Celtic":
+                    celtic.append(row[0])
+                elif row[2] == "Arthurian":
+                    arthur.append(row[0])
+                elif row[2] == "Polynesian":
+                    poly.append(row[0])
+                elif row[2] == "Slavic":
+                    slavic.append(row[0])
+                else:
+                    voodo.append(row[0])
+
+            else:
+                break
+
+        for row in reader:
+            if row[0] not in (None, ""):
+                warriors.append(row[0])
+
+                # Assigning pantheon
+                if row[2] == "Greek":
+                    greek.append(row[0])
+                elif row[2] == "Egyptian":
+                    egypt.append(row[0])
+                elif row[2] == "Norse":
+                    norse.append(row[0])
+                elif row[2] == "Chinese":
+                    china.append(row[0])
+                elif row[2] == "Roman":
+                    roman.append(row[0])
+                elif row[2] == "Mayan":
+                    mayan.append(row[0])
+                elif row[2] == "Hindu":
+                    hindu.append(row[0])
+                elif row[2] == "Japanese":
+                    japan.append(row[0])
+                elif row[2] == "Celtic":
+                    celtic.append(row[0])
+                elif row[2] == "Arthurian":
+                    arthur.append(row[0])
+                elif row[2] == "Polynesian":
+                    poly.append(row[0])
+                elif row[2] == "Slavic":
+                    slavic.append(row[0])
+                else:
+                    voodo.append(row[0])
+
+            else:
+                break
+
+        for row in reader:
+            if row[0] not in (None, ""):
+                assassins.append(row[0])
+
+                # Assigning pantheon
+                if row[2] == "Greek":
+                    greek.append(row[0])
+                elif row[2] == "Egyptian":
+                    egypt.append(row[0])
+                elif row[2] == "Norse":
+                    norse.append(row[0])
+                elif row[2] == "Chinese":
+                    china.append(row[0])
+                elif row[2] == "Roman":
+                    roman.append(row[0])
+                elif row[2] == "Mayan":
+                    mayan.append(row[0])
+                elif row[2] == "Hindu":
+                    hindu.append(row[0])
+                elif row[2] == "Japanese":
+                    japan.append(row[0])
+                elif row[2] == "Celtic":
+                    celtic.append(row[0])
+                elif row[2] == "Arthurian":
+                    arthur.append(row[0])
+                elif row[2] == "Polynesian":
+                    poly.append(row[0])
+                elif row[2] == "Slavic":
+                    slavic.append(row[0])
+                else:
+                    voodo.append(row[0])
+
+            else:
+                break
+
+        for row in reader:
+            if row[0] not in (None, ""):
+                hunters.append(row[0])
+
+                # Assigning pantheon
+                if row[2] == "Greek":
+                    greek.append(row[0])
+                elif row[2] == "Egyptian":
+                    egypt.append(row[0])
+                elif row[2] == "Norse":
+                    norse.append(row[0])
+                elif row[2] == "Chinese":
+                    china.append(row[0])
+                elif row[2] == "Roman":
+                    roman.append(row[0])
+                elif row[2] == "Mayan":
+                    mayan.append(row[0])
+                elif row[2] == "Hindu":
+                    hindu.append(row[0])
+                elif row[2] == "Japanese":
+                    japan.append(row[0])
+                elif row[2] == "Celtic":
+                    celtic.append(row[0])
+                elif row[2] == "Arthurian":
+                    arthur.append(row[0])
+                elif row[2] == "Polynesian":
+                    poly.append(row[0])
+                elif row[2] == "Slavic":
+                    slavic.append(row[0])
+                else:
+                    voodo.append(row[0])
+
+            else:
+                break
+
+        for row in reader:
+            if row[0] not in (None, ""):
+                mages.append(row[0])
+
+                # Assigning pantheon
+                if row[2] == "Greek":
+                    greek.append(row[0])
+                elif row[2] == "Egyptian":
+                    egypt.append(row[0])
+                elif row[2] == "Norse":
+                    norse.append(row[0])
+                elif row[2] == "Chinese":
+                    china.append(row[0])
+                elif row[2] == "Roman":
+                    roman.append(row[0])
+                elif row[2] == "Mayan":
+                    mayan.append(row[0])
+                elif row[2] == "Hindu":
+                    hindu.append(row[0])
+                elif row[2] == "Japanese":
+                    japan.append(row[0])
+                elif row[2] == "Celtic":
+                    celtic.append(row[0])
+                elif row[2] == "Arthurian":
+                    arthur.append(row[0])
+                elif row[2] == "Polynesian":
+                    poly.append(row[0])
+                elif row[2] == "Slavic":
+                    slavic.append(row[0])
+                else:
+                    voodo.append(row[0])
+
+            else:
+                break
+    
     #Splitting the message content into parts
     order = message.content.split()
 
