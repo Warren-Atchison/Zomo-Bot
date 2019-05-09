@@ -1,0 +1,363 @@
+import discord
+import csv
+import secrets
+
+client = discord.Client()
+
+# Opening the god information CSV
+with open("godsinfo.csv") as god_info:
+    reader = csv.reader(god_info)
+
+    #The following lists are for use in randomizing gods
+    guardians = []
+
+    warriors = []
+
+    assassins = []
+
+    hunters = []
+
+    mages = []
+
+    greek = []
+    roman = []
+    norse = []
+    egypt = []
+    hindu = []
+    china = []
+    mayan = []
+    japan = []
+    celtic = []
+    slavic = []
+    poly = []
+    voodo = []
+    arthur = []
+
+    next(god_info)
+    for row in reader:
+        if row[0] not in (None, ""):
+            guardians.append(row[0])
+
+            # Assigning pantheon
+            if row[2] == "Greek":
+                greek.append(row[0])
+            elif row[2] == "Egyptian":
+                egypt.append(row[0])
+            elif row[2] == "Norse":
+                norse.append(row[0])
+            elif row[2] == "Chinese":
+                china.append(row[0])
+            elif row[2] == "Roman":
+                roman.append(row[0])
+            elif row[2] == "Mayan":
+                mayan.append(row[0])
+            elif row[2] == "Hindu":
+                hindu.append(row[0])
+            elif row[2] == "Japanese":
+                japan.append(row[0])
+            elif row[2] == "Celtic":
+                celtic.append(row[0])
+            elif row[2] == "Arthurian":
+                arthur.append(row[0])
+            elif row[2] == "Polynesian":
+                poly.append(row[0])
+            elif row[2] == "Slavic":
+                slavic.append(row[0])
+            else:
+                voodo.append(row[0])
+            
+        else:
+            break
+
+    for row in reader:
+        if row[0] not in (None, ""):
+            warriors.append(row[0])
+
+            # Assigning pantheon
+            if row[2] == "Greek":
+                greek.append(row[0])
+            elif row[2] == "Egyptian":
+                egypt.append(row[0])
+            elif row[2] == "Norse":
+                norse.append(row[0])
+            elif row[2] == "Chinese":
+                china.append(row[0])
+            elif row[2] == "Roman":
+                roman.append(row[0])
+            elif row[2] == "Mayan":
+                mayan.append(row[0])
+            elif row[2] == "Hindu":
+                hindu.append(row[0])
+            elif row[2] == "Japanese":
+                japan.append(row[0])
+            elif row[2] == "Celtic":
+                celtic.append(row[0])
+            elif row[2] == "Arthurian":
+                arthur.append(row[0])
+            elif row[2] == "Polynesian":
+                poly.append(row[0])
+            elif row[2] == "Slavic":
+                slavic.append(row[0])
+            else:
+                voodo.append(row[0])
+
+        else:
+            break
+
+    for row in reader:
+        if row[0] not in (None, ""):
+            assassins.append(row[0])
+
+            # Assigning pantheon
+            if row[2] == "Greek":
+                greek.append(row[0])
+            elif row[2] == "Egyptian":
+                egypt.append(row[0])
+            elif row[2] == "Norse":
+                norse.append(row[0])
+            elif row[2] == "Chinese":
+                china.append(row[0])
+            elif row[2] == "Roman":
+                roman.append(row[0])
+            elif row[2] == "Mayan":
+                mayan.append(row[0])
+            elif row[2] == "Hindu":
+                hindu.append(row[0])
+            elif row[2] == "Japanese":
+                japan.append(row[0])
+            elif row[2] == "Celtic":
+                celtic.append(row[0])
+            elif row[2] == "Arthurian":
+                arthur.append(row[0])
+            elif row[2] == "Polynesian":
+                poly.append(row[0])
+            elif row[2] == "Slavic":
+                slavic.append(row[0])
+            else:
+                voodo.append(row[0])
+
+        else:
+            break
+
+    for row in reader:
+        if row[0] not in (None, ""):
+            hunters.append(row[0])
+
+            # Assigning pantheon
+            if row[2] == "Greek":
+                greek.append(row[0])
+            elif row[2] == "Egyptian":
+                egypt.append(row[0])
+            elif row[2] == "Norse":
+                norse.append(row[0])
+            elif row[2] == "Chinese":
+                china.append(row[0])
+            elif row[2] == "Roman":
+                roman.append(row[0])
+            elif row[2] == "Mayan":
+                mayan.append(row[0])
+            elif row[2] == "Hindu":
+                hindu.append(row[0])
+            elif row[2] == "Japanese":
+                japan.append(row[0])
+            elif row[2] == "Celtic":
+                celtic.append(row[0])
+            elif row[2] == "Arthurian":
+                arthur.append(row[0])
+            elif row[2] == "Polynesian":
+                poly.append(row[0])
+            elif row[2] == "Slavic":
+                slavic.append(row[0])
+            else:
+                voodo.append(row[0])
+
+        else:
+            break
+
+    for row in reader:
+        if row[0] not in (None, ""):
+            mages.append(row[0])
+
+            # Assigning pantheon
+            if row[2] == "Greek":
+                greek.append(row[0])
+            elif row[2] == "Egyptian":
+                egypt.append(row[0])
+            elif row[2] == "Norse":
+                norse.append(row[0])
+            elif row[2] == "Chinese":
+                china.append(row[0])
+            elif row[2] == "Roman":
+                roman.append(row[0])
+            elif row[2] == "Mayan":
+                mayan.append(row[0])
+            elif row[2] == "Hindu":
+                hindu.append(row[0])
+            elif row[2] == "Japanese":
+                japan.append(row[0])
+            elif row[2] == "Celtic":
+                celtic.append(row[0])
+            elif row[2] == "Arthurian":
+                arthur.append(row[0])
+            elif row[2] == "Polynesian":
+                poly.append(row[0])
+            elif row[2] == "Slavic":
+                slavic.append(row[0])
+            else:
+                voodo.append(row[0])
+
+        else:
+            break
+
+# To intersect lists, if needed
+def intersection(a, b):
+
+    temp = set(b)
+    c = [value for value in a if value in temp]
+    return c
+
+# Notify console when the bot is done doing csv stuff
+@client.event
+async def on_ready():
+    print("Smite Randomizer is available for use!")
+    activity = discord.Game(name="SMITE")
+    await client.change_presence(status=discord.Status.idle, activity=activity)
+
+# Responding to messages in discord
+@client.event
+async def on_message(message):
+    #Preventing bot recursion
+    if message.author == client.user:
+        return
+
+    roles = []
+    pantheons = []
+    pandict = {
+        "Egyptian":[["egy", "egypt", "egyptian"], egypt],
+        "Greek":[["gre", "greek"], greek],
+        "Roman":[["rom", "roman"],  roman],
+        "Arthurian":[["arth", "arthur", "arthurian"],  arthur],
+        "Celtic":[["celt", "celtic"],  celtic],
+        "Chinese":[["chi", "chinese"],  china],
+        "Hindu":[["hin", "hind", "hindu"],  hindu],
+        "Japanese":[["jap","japan","japanese"],  japan],
+        "Mayan":[["may", "maya", "mayan"],  mayan],
+        "Norse":[["no", "nor", "norse"], norse],
+        "Polynesian":[["pol", "poly", "polynesian"], poly],
+        "Slavic":[["sla","slav","slavic"], slavic],
+        "Voodoo":[["voo", "vood", "voodoo"], voodo]
+}
+
+    #Splitting the message content into parts
+    order = message.content.split()
+
+    if order[0] == "%god":
+
+        if len(order) > 1:
+            #If the user is dictating what classes to include
+            if order[1][0] == "+":
+                order[1] = order[1].upper()
+                for i in order[1][1::]:
+                    if i=="G": roles.append("Guardians")
+                    elif i=="W": roles.append("Warriors")
+                    elif i=="A": roles.append("Assassins")
+                    elif i=="H": roles.append("Hunters")
+                    elif i=="M": roles.append("Mages")
+                    else:
+                        await message.channel.send("Invalid class selection.")
+                        return
+                #Removing this portion of the order, as it has been done
+                del order[1]
+
+            elif order[1][0] == "-":
+                roles = ["Guardians", "Warriors", "Assassins", "Hunters", "Mages"]
+                order[1] = order[1].upper()
+                for i in order[1][1::]:
+                    if i=="G": roles.remove("Guardians")
+                    elif i=="W": roles.remove("Warriors")
+                    elif i=="A": roles.remove("Assassins")
+                    elif i=="H": roles.remove("Hunters")
+                    elif i=="M": roles.remove("Mages")
+                    else:
+                        await message.channel.send("Invalid class deselection.")
+                        return
+                #Removing this portion of the order, as it has been done.
+                del order[1]
+
+            else:
+                roles = ["Guardians", "Warriors", "Assassins", "Hunters", "Mages"]
+        else:
+            roles = ["Guardians", "Warriors", "Assassins", "Hunters", "Mages"]
+        
+        # Creating the list of gods having been restricted
+        gods = []
+        for i in roles:
+            if i == "Guardians":
+                for god in guardians:
+                    gods.append(god)
+                    
+            if i == "Warriors":
+                for god in warriors:
+                    gods.append(god)
+            
+            if i == "Assassins":
+                for god in assassins:
+                    gods.append(god)
+                
+            if i == "Hunters":
+                for god in hunters:
+                    gods.append(god)
+            
+            if i == "Mages":
+                for god in mages:
+                    gods.append(god)
+
+        #If there are additional arguments after roles
+        if len(order) > 1:
+            gods_by_pan = []
+
+            #Removing %god for ease
+            del order[0]
+
+            #Putting the user's command in lowercase because users are dumb
+            for i in range(len(order)):
+                order[i] = order[i].lower()
+
+            #Iterating through the user's command
+            for i in order:
+                #Iterating through the pantheon dictionary
+                for j in pandict:
+                    #Iterating through the list associated with each key
+                    for k in pandict[j][0]:
+                        #If one of the elems in the list was given by the user
+                        if i == k:
+                            #Add the KEY to the pantheons list
+                            pantheons.append(j)
+        
+            pantheons = sorted(pantheons)
+            #Removing any gods that are not in the proper pantheon
+            #Iterating through the pantheons
+            for i in pantheons:
+                #Iterating through the gods in the pantheon
+                for god in pandict[i][1]:
+                    #Adding the god to new god list
+                    gods_by_pan.append(god)
+
+
+            #Editing the god list to be the intersection of the two lists
+            gods = intersection(gods, gods_by_pan)
+
+        if len(gods) == 0:
+            await message.channel.send("No gods match those criteria!")
+        else:
+            selection = gods[secrets.randbelow(len(gods))]
+            await message.channel.send(selection)
+
+    if "%help" in message.content:
+        await message.channel.send("To use me, call %god. Optional arguments are:\n\
+\t1) +<args>. This will specify which classes you would like to include.\n\
+\t2) -<args>. This will specify which classes you would like to exclude.\n\
+\t3) <pantheon name>. This will specify which pantheons you would like to include.\n\
+Please do NOT combine arguments 1 and 2.")
+
+client.run("TOKEN")
