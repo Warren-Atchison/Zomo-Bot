@@ -2,6 +2,7 @@ import os
 import discord
 import json
 import sys
+import RandomSmite
 
 # Reading in the information from config.json
 try:
@@ -26,6 +27,10 @@ async def on_message(message):
     # Sends a greeting on "<prefix>hi"
     if(message.content == (config["prefix"] + "hi")):
         await message.channel.send("Hi! :heart:")
+    # Run the Random Smite app
+    elif(message.content[0] == "%"):
+        RandomSmite.main()
+        
 
 # Start Zomo!
 client.run(config["token"])
